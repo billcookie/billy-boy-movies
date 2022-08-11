@@ -1,9 +1,11 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
-<%= link_to "Create", new_list_path %>
-<% @lists.each do |list| %>
-  <ul>
-    <%= link_to list.name, list_path(list) %>
-  </ul>
+<h1>Movies!!!!</h1>
+<div class="container">
 
-<% end %>
+  <%= link_to "Create List", new_list_path, class: "btn btn-flat" %>
+
+  <% @lists.each do |list| %>
+    <ul>
+      <%= link_to list.name, list_path(list) %>
+    </ul>
+  <% end %>
+</div>
