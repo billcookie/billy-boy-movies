@@ -2,8 +2,13 @@
 @import "alert";
 @import "avatar";
 @import "form_legend_clear";
+@import "banner";
 @import "navbar";
 @import "button";
+@import "cards";
 @import "flip_card";
 @import "footer";
-@import "cards";
+
+body {
+  background-color: rgb(45, 45, 45);
+}

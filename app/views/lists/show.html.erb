@@ -1,8 +1,7 @@
 <h1>Welcome to the list</h1>
->
-<%= link_to "Add movie",  new_list_bookmark_path(@list) %>
-<% @list.bookmarks.each do |bookmark| %>
-  <ul>
+<%= link_to "Add movie",  new_list_bookmark_path(@list), class: 'btn btn-primary mt-3' %>
+<div class="cards">
+  <% @list.bookmarks.each do |bookmark| %>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
@@ -19,5 +18,5 @@
         </div>
       </div>
     </div>
-  </ul>
-<% end %>
+  <% end %>
+</div>

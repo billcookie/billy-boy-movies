@@ -1,11 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1579803815615-1203fb5a2e9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bW92aWV8fHx8fHwxNjYwMjgzMTg2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080);">
+  <div class="container">
+    <h1> Billy Boys Movies <strong>chill</strong> to the <strong>max</strong>!</h1>
+    <a class="btn btn-flat" href="#">Add a new list</a>
+  </div>
+</div>
 <h1>Movies!!!!</h1>
 <div class="container">
   <%= link_to "Create List", new_list_path, class: "btn btn-flat" %>
+  <div class="cards">
   <% @lists.each do |list| %>
-    <div class="cards">
+
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
         <%= link_to list.name, list_path(list) %>
       </div>
-    </div>
+
   <% end %>
+  </div>
 </div>
