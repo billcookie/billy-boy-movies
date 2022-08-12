@@ -5,7 +5,7 @@
 
   <% @lists.each do |list| %>
     <ul>
-      <%= cl_image_path list.photo.key %>
+      <%= cl_image_tag list.photo.key %>
       <%= link_to list.name, list_path(list) %>
     </ul>
   <% end %>
